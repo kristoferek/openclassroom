@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Brooklyn Outdoor Film Festival</title>
+  <meta name="description" content="Everything you need to know about the biggest and most accesible film event ever.">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<html>
+  <body class="" id="start">
+
+    <!-- Header
+    Slider with movies. Movie has title, director and b&w award images
+    -->
+    <header>
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-navbar-collapse" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand visible-xs hidden-xxs" href="#">BOFF 5<sup>th</sup> - 8<sup>th</sup> August 2017</div>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="main-menu-navbar-collapse">
+
+            <ul class="nav navbar-nav">
+              <li class="hidden-xs">
+                <a href="#start">
+                  <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                </a>
+              </li>
+              <li class="visible-xs">
+                <a href="#start">
+                  home
+                </a>
+              </li>
+              <li class="navbar-text hidden-xs">|</li>
+              <li>
+                <a href="#festival">
+                  news
+                </a>
+              </li>
+              <li class="navbar-text hidden-xs">|</li>
+              <li>
+                <a href="#agenda">
+                  agenda
+                </a>
+              </li>
+              <li class="navbar-text hidden-xs">|</li>
+              <li>
+                <a href="#registration">
+                  registration
+                </a>
+              </li>
+              <li class="navbar-text hidden-xs">|</li>
+              <li>
+                <a href="#contact">
+                  contact
+                </a>
+              </li>
+            </ul>
+            <!-- <div class="navbar-brand hidden-xs pull-right" href="#">BOFF 5<sup>th</sup> - 8<sup>th</sup> August 2017</div> -->
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="" id="mainHeader">
+        <!-- Logo, date and social icons on smartphones -->
+          <div class="row visible-xs" id="smallHeader">
+          <!--  Logo and date -->
+            <div class="col-xs-10">
+              <div class="row">
+                <div class="col-xs-12">
+                  <a href="#start">
+                    <img class="topLogo img-responsive" src="./images/logo_boff.svg" alt="Brooklyn Outdoor Film Festival">
+                  </a>
+                </div>
+                <div class="col-xs-12">
+                  <h2 class="date">
+                    5<sup>th</sup> - 8<sup>th</sup> August 2017
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- Social icons -->
+            <div class="col-xs-2 socialIcons">
+              <ul class="text-right list-unstyled">
+                <li>
+                  <a href="#"><img src="./images/icon_facebook.svg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#"><img src="./images/icon_twitter.svg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#"><img src="./images/icon_instagram.svg" alt=""></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+
+              <!-- Logo, date and social icons -->
+              <div class="carousel-top-caption container hidden-xs">
+                <!-- Logo -->
+                <div class="col-sm-3">
+                  <a href="#start">
+                    <img class="topLogo" src="./images/logo_boff.svg" alt="Brooklyn Outdoor Film Festival">
+                  </a>
+                </div>
+                <!-- Date  -->
+                <div class="col-sm-5 col-md-6">
+                  <h2 class="date text-center">
+                    5<sup>th</sup> - 8<sup>th</sup> August 2017
+                  </h2>
+                </div>
+                <!-- Social icons -->
+                <div class="col-sm-4 col-md-3 text-right">
+                  <ul class="socialIcons list-inline">
+                    <li>
+                      <a href="#"><img src="./images/icon_facebook.svg" alt=""></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./images/icon_twitter.svg" alt=""></a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./images/icon_instagram.svg" alt=""></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#mainCarousel" data-slide-to="1"></li>
+                <li data-target="#mainCarousel" data-slide-to="2"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="https://placeimg.com/1200/768/people/grayscale" alt="Movie One">
+                  <div class="carousel-caption">
+                    <a href="#" alt="Movie One link" title="Movie One link">
+                      <h1 class="movieTitle">
+                        Title One
+                      </h1>
+                    </a>
+                    <h3 class="movieDirector">
+                      Name of Director One
+                    </h3>
+                    <ul class="movieAwards list-inline hidden-xs">
+                      <li>
+                        <a href="#"><img src="./images/medal.png" alt=""></a>
+                      </li>
+                      <li>
+                        <a href="#"><img src="./images/trophy.png" alt=""></a>
+                      </li>
+                      <li>
+                        <a href="#"><img src="./images/oscars.png" alt=""></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <img src="https://placeimg.com/1200/768/tech/grayscale" alt="Movie Two">
+                  <div class="carousel-caption">
+                    <a href="#" alt="Movie Two link" title="Movie Two link">
+                      <h1 class="movieTitle">
+                        Title Two
+                      </h1>
+                    </a>
+                    <h3 class="movieDirector">
+                      Name of Director Two
+                    </h3>
+                    <ul class="movieAwards list-inline hidden-xs">
+                      <li>
+                        <a href="#"><img src="./images/medal.png" alt=""></a>
+                      </li>
+                      <li>
+                        <a href="#"><img src="./images/trophy.png" alt=""></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <img src="https://placeimg.com/1200/768/nature/grayscale" alt="Movie Three">
+                  <div class="carousel-caption">
+                    <a href="#" alt="Movie Three link" title="Movie Three link">
+                      <h1 class="movieTitle">
+                        Title Three
+                      </h1>
+                    </a>
+                    <h3 class="movieDirector">
+                      Name of Director Three
+                    </h3>
+                    <ul class="movieAwards list-inline hidden-xs">
+                      <li>
+                        <a href="#"><img src="./images/olive-branches.png" alt=""></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Place for next slides ... -->
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#mainCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#mainCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          <!-- End of carousel -->
+          </div>
+        </div>
+
+    </header>
+    <!-- End of header -->
+
+    <!-- Sections -->
+    <div class="container">
+
+      <section class="row indent" id="festival">
+
+        <!-- information about festival -->
+        <div class="col-md-4 col-lg-6 text-justify" id="about">
+          <div>
+            <h1>About festival</h1>
+          </div>
+          <div >
+            <p>
+              <strong>
+                Welcome to the <abbr title="Brooklyn Outdoor Film Festival - Edition V">Brooklyn Outdoor Film Festival</abbr>
+              </strong>
+            </p>
+            <p>
+              We are happy to announce that this year, 5 <sup>th</sup>-8<sup>th</sup> of August, there will be four day long film show. Nevertheless you are young, senior, fully capable or handicup - this event is available for you, your familly and friends.
+            </p>
+            <p>
+              Traditionaly great directors and celebrities will join us during last day Gala. According to fully filled <a href="#agenda">agenda</a> there are going to be presented 18 movies of domestic and foreign production.
+              The show will take place in our beloved park <a href="#venue">Brooklyn Park - Pier 1</a>.
+            </p>
+            <p>
+              This year <a href="#jury">jury</a> gathered a truly proffessional and recognizable team. They will work together to award movies in six cathegories.
+            </p>
+            <p>
+              To deliver best watching experience we provided 5 000 free tickets for visitor. Please use our <a href="#registration">online registration form</a> to book your <abbr title="">free ticket</abbr> today!
+            </p>
+          </div>
+        </div>
+
+        <!-- News from twitter account -->
+        <div class="col-md-8 col-lg-6" id="about">
+          <div >
+            <h1>News</h1>
+          </div>
+          <a class="twitter-timeline" data-link-color="#c80000" data-height="500" data-theme="dark" href="https://twitter.com/sundancefest">Festival news</a>
+        </div>
+
+        <!-- Film about festival-->
+        <div class="col-xs-12 embed-responsive embed-responsive-16by9" id="festivalVideo">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OuFAnTrZbKM?rel=0&amp;controls=1&amp;showinfo=0" allowfullscreen>cokolwiek</iframe>
+        </div>
+
+      </section>
+      <!-- Jury details -->
+      <section class="row indent" id="jury">
+        <div class="col-xs-12">
+          <h1>Members of jury</h1>
+        </div>
+        <div class="col-sm-4 text-center">
+          <img class="faceImage" src="https://s3.amazonaws.com/uifaces/faces/twitter/mlane/128.jpg" alt="">
+          <h4>
+            John Doe</br>
+            <small>V-ce President </br>of Institute of Modern Movie</small>
+          </h4>
+        </div>
+        <div class="col-sm-4 text-center">
+          <img class="faceImage" src="https://s3.amazonaws.com/uifaces/faces/twitter/ritu/128.jpg" alt="">
+          <h4>
+            Christian Bale</br>
+            <small>CEO</br>of 20th Century Fox </small>
+          </h4>
+        </div>
+        <div class="col-sm-4 text-center">
+          <img class="faceImage" src="https://s3.amazonaws.com/uifaces/faces/twitter/vladzima/128.jpg" alt="">
+          <h4>
+            Dirty Harry</br>
+            <small>Actor and Director</small>
+          </h4>
+        </div>
+      </section>
+
+      <!-- Agenda for four days linking to more detailed page with agenda -->
+      <section class="row" id="agenda">
+
+          <div class="col-xs-12">
+            <h1 class="indent">Agenda</h1>
+          </div>
+
+
+          <div class="col-xs-12 col-md-6 col-lg-3" id=day1>
+            <h3 class="indent">
+              Thursday</br>
+              <small>5th August</small>
+            </h3>
+            <div class="divider">
+              <div class="number">1</div>
+            </div>
+            <div class="indent">
+              <dl class="dl-horizontal">
+                <dt>09:00</dt>
+                <dd>Film title longer then others</dd>
+                <dt>10:00</dt>
+                <dd>Film title</dd>
+                <dt>11:00</dt>
+                <dd>Film title with ...</dd>
+                <dt>13:00</dt>
+                <dd>Film title medium length</dd>
+                <dt>14:00</dt>
+                <dd>Film title with extralong and unlogical quatity of chars</dd>
+                <dt>16:00</dt>
+                <dd>Film title</dd>
+                <dt>18:00</dt>
+                <dd>Film title medium length</dd>
+                <dt>19:00</dt>
+                <dd>Film title with extralong and unlogical quatity of chars</dd>
+                <dt>21:00</dt>
+                <dd>Film title</dd>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-md-6 col-lg-3" id=day2>
+            <h3 class=" indent">
+              Friday</br>
+              <small>6th August</small>
+            </h3>
+            <div class="divider">
+              <div class="number">2</div>
+            </div>
+            <div class="indent">
+              <dl class="dl-horizontal">
+                <dt>09:00</dt>
+                <dd>Film title longer then others</dd>
+                <dt>10:00</dt>
+                <dd>Film title</dd>
+                <dt>11:00</dt>
+                <dd>Film title with ...</dd>
+                <dt>13:00</dt>
+                <dd>Film title medium length</dd>
+                <dt>14:00</dt>
+                <dd>Film title with extralong and unlogical quatity of chars</dd>
+                <dt>16:00</dt>
+                <dd>Film title</dd>
+                <dt>18:00</dt>
+                <dd>Film title medium length</dd>
+                <dt>19:00</dt>
+                <dd>Film title with extralong and unlogical quatity of chars</dd>
+                <dt>21:00</dt>
+                <dd>Film title</dd>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-md-6 col-lg-3" id="day3">
+            <h3 class="indent">
+              Saturday</br>
+              <small>7th August</small>
+            </h3>
+            <div class="divider">
+              <div class="number">3</div>
+            </div>
+            <div class="indent">
+              <dl class="dl-horizontal">
+                <dt>09:00</dt>
+                <dd>Film title longer then others</dd>
+                <dt>10:00</dt>
+                <dd>Film title</dd>
+                <dt>11:00</dt>
+                <dd>Film title with ...</dd>
+                <dt>13:00</dt>
+                <dd>Film title medium length</dd>
+                <dt>14:00</dt>
+                <dd>Film title with extralong and unlogical quatity of chars</dd>
+                <dt>16:00</dt>
+                <dd>Film title</dd>
+                <dt>18:00</dt>
+                <dd>Film title medium length</dd>
+                <dt>19:00</dt>
+                <dd>Film title with extralong and unlogical quatity of chars</dd>
+                <dt>21:00</dt>
+                <dd>Film title</dd>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-md-6 col-lg-3" id="day4">
+            <h3 class="indent">
+              Sunday</br>
+              <small>8th August</small>
+            </h3>
+            <div class="divider">
+              <div class="number">4</div>
+            </div>
+            <div class="indent">
+              <dl class="dl-horizontal">
+                <dt>09:00</dt>
+                <dd>Film title longer then others</dd>
+                <dt>10:00</dt>
+                <dd>Film title</dd>
+                <dt>11:00</dt>
+                <dd>Film title with ...</dd>
+                <dt>13:00</dt>
+                <dd>Film title medium length</dd>
+                <dt>14:00</dt>
+                <dd>Film title with extralong and unlogical quatity of chars</dd>
+                <dt>16:00</dt>
+                <dd>Film title</dd>
+                <dt>18:00</dt>
+                <dd>Film title medium length</dd>
+                <dt>19:00</dt>
+                <dd>Film title with extralong and unlogical quatity of chars</dd>
+                <dt>21:00</dt>
+                <dd>Film title</dd>
+              </dl>
+            </div>
+          </div>
+
+
+      </section>
+
+      <!-- Venue detailes with maps and partners logo -->
+      <section class="row indent" id="venue">
+        <div class="col-xs-12">
+          <h1 class="">Venue</h1>
+        </div>
+        <div class="col-md-8">
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.9547123374637!2d-73.99850400331985!3d40.696995042282865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a4771eac885%3A0xea881fa2b2ba3e23!2sBrooklyn+Bridge+Park+Greenway%2C+Brooklyn%2C+NY+11201%2C+Stany+Zjednoczone!5e0!3m2!1spl!2spl!4v1504302348825"  frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-4 indent">
+          <div class="row">
+            <address class="col-sm-8">
+              <h3>Brooklyn Bridge Park</br>
+                <small>334 Furman St, <br> Brooklyn, NY 11201, <br>United States</small>
+              </h3>
+            </address>
+            <div class="col-sm-4 col-md-12">
+              <a href="https://www.brooklynbridgepark.org/">
+                <img class="img-vertical-center" src="https://www.brooklynbridgepark.org/img/bbp_logo_huge_blue.png" alt="Brooklyn Bridge Park" title="Brooklyn Bridge Park">
+              </a>
+            </div>
+            <div class="col-sm-4 col-md-12">
+              <a href="http://www.bkmag.com/">
+                <img class="img-vertical-center" src="./images/brooklynsnews.png" alt="Brooklyn's News" title="Brooklyn's New Website'">
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Registration form with counter -->
+      <section class="row indent" id="registration">
+        <div class="col-xs-12">
+          <h1>Registration <br>
+          <small>Fill this form to safely book your entrence ticket for festival. Ticket and reservation is totaly free of charge.</small>
+          </h1>
+        </div>
+        <div class="col-xs-12">
+          <form class="row">
+            <div class="col-sm-4 col-lg-5">
+              <div class="form-group">
+                <label class="sr-only" for="Firstname">First name</label>
+                <input type="text" class="form-control" id="Firstname" placeholder="Surename">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="Surename">Surname</label>
+                <input type="text" class="form-control" id="Surename" placeholder="Surname">
+              </div>
+            </div>
+            <div class="col-sm-4 col-lg-5">
+              <div class="form-group">
+                <label class="sr-only" for="Email">Email</label>
+                <input type="email" class="form-control" id="Email" placeholder="Email">
+              </div>
+              <button type="submit" class="btn btn-inverted">Make reservation</button>
+            </div>
+            <div class="col-sm-4 col-lg-2" id="counter">
+                <h3>Still avaliable</h3>
+                <h1 id="counterValue">1556 <small>tcks</small></h1>
+            </div>
+          </form>
+        </div>
+
+      </section>
+
+      <!-- Description of firm and images of chosen organizers-->
+      <section class="row indent" id="whoarewe">
+        <div class="col-xs-12">
+          <h1>Who are we</h1>
+        </div>
+        <div class="col-sm-3 text-center">
+          <h4>
+            Passionate and reliable</br></br>
+            <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</small>
+          </h4>
+        </div>
+        <div class="col-sm-3 text-center">
+          <img class="faceImage" src="https://s3.amazonaws.com/uifaces/faces/twitter/mlane/128.jpg" alt="">
+          <h4>
+            John Doe</br>
+            <small>V-ce President </br>of Institute of Modern Movie</small>
+          </h4>
+        </div>
+        <div class="col-sm-3 text-center">
+          <img class="faceImage" src="https://s3.amazonaws.com/uifaces/faces/twitter/ritu/128.jpg" alt="">
+          <h4>
+            Christian Bale</br>
+            <small>CEO</br>of 20th Century Fox </small>
+          </h4>
+        </div>
+        <div class="col-sm-3 text-center">
+          <img class="faceImage" src="https://s3.amazonaws.com/uifaces/faces/twitter/vladzima/128.jpg" alt="">
+          <h4>
+            Dirty Harry</br>
+            <small>Actor and Director</small>
+          </h4>
+        </div>
+      </section>
+
+      <!-- Contact form -->
+      <section class="row indent" id="contact">
+        <div class="col-xs-12">
+          <div class="row col-xs-12">
+            <h1>Contact us <br>
+              <small>Please, do not hesitate to contact us in any urgent question or information request you might need. We will contact you or answer as soon as possible.
+              </small>
+            </h1>
+          </div>
+          <form class="row" id="contactForm">
+            <div class="col-xs-12 col-sm-5">
+              <address>
+                <h3>Brooklyn Bridge Tower</br>
+                  <small>334 Furman St, <br> Brooklyn, NY 11201, <br>United States</small>
+                </h3>
+              </address>
+              <h4><a href="tel:001345234567"><i class="glyphicon glyphicon-phone"></i> +1 345234567</a></h4>
+              <h4><a href="mailto:info@boff.com"><i class="glyphicon glyphicon-envelope"></i> info@boff.com</a><br>&nbsp;</h4>
+            </div>
+            <div class="col-xs-12 col-sm-7">
+              <div class="form-group">
+                <label class="sr-only" for="Name">Your name</label>
+                <input type="text" class="form-control" id="Name" placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="ContactEmail">Surname</label>
+                <input type="email" class="form-control" id="ContactEmail" placeholder="mail@hwhatever.com">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-7">
+              <div class="form-group">
+                <label class="sr-only" for="Message">Message</label>
+                <textarea type="email" class="form-control" id="Email" rows="4">Your message</textarea>
+              </div>
+              <button type="submit" class="btn btn-inverted pull-right">Send message</button>
+            </div>
+          </form>
+
+        </div>
+
+      </section>
+
+      <!-- Linked logothypes of sponsors -->
+      <section class="row indent" id="sponsors">
+        <div class="col-xs-12">
+          <h1>Our mighty sponsors</h1>
+        </div>
+        <div class="col-xs-12 logos">
+          <a href="#sponsors">
+            <img class="img-sponsor" src="./images/logo1.png" alt="">
+          </a>
+
+          <a href="#sponsors">
+            <img class="img-sponsor" src="./images/logo2.png" alt="">
+          </a>
+          <a href="#sponsors">
+            <img class="img-sponsor" src="./images/logo3.png" alt="">
+          </a>
+          <a href="#sponsors">
+            <img class="img-sponsor" src="./images/logo4.png" alt="">
+          </a>
+          <a href="#sponsors">
+            <img class="img-sponsor" src="./images/logo5.png" alt="">
+          </a>
+        </div>
+
+      </section>
+
+      <!-- Footer consists of logo, newsletter subscription, and copyright note -->
+      <footer class="row indent">
+        <div class="hidden-xs col-sm-3 col-md-2">
+          <img class="img-responsive" src="./images/logo_boff.svg" alt="Brooklyn Outdoor Film Festival">
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-10">
+          <h3>Newsletter</h3>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-10">
+          <form>
+            <div class="input-group">
+              <label class="sr-only" for="Email">Email</label>
+              <input type="email" class="form-control" id="Email" placeholder="email@whatever.com">
+              <div type="submit" class="btn btn-inverted input-group-addon">Subscribe</div>
+            </div>
+          </form>
+        </div>
+        <div class="col-xs-12 text-right">
+          <p>
+            <br>
+            &copy; Copyright BOFF
+          </p>
+        </div>
+
+      </footer>
+    </div>
+
+  </body>
+
+</html>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="./js/app.js" charset="utf-8"></script>

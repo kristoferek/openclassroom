@@ -1,0 +1,149 @@
+*{
+  margin: 0;
+}
+@font-face {
+    font-family: 'EraserRegular';
+    src: url('fonts/eraser_regular/EraserRegular-webfont.eot');
+    src: url('fonts/eraser_regular/EraserRegular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/eraser_regular/EraserRegular-webfont.woff') format('woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url('fonts/roboto_slab/RobotoSlab-Bold-webfont.eot');
+    src: url('fonts/roboto_slab/RobotoSlab-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto_slab/RobotoSlab-Bold-webfont.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'RobotoSlab-light';
+    src: url('fonts/roboto_slab/RobotoSlab-Light-webfont.eot');
+    src: url('fonts/roboto_slab/RobotoSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto_slab/RobotoSlab-Light-webfont.woff') format('woff');
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url('fonts/roboto_slab/RobotoSlab-Regular-webfont.eot');
+    src: url('fonts/roboto_slab/RobotoSlab-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto_slab/RobotoSlab-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+}
+
+/* Global styles*/
+html{
+  background-image: url('../bg_gray.jpg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size:60%;
+  background-attachment: fixed;
+}
+body{
+  font-family: 'RobotoSlab', Verdana, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.67em;
+  text-align:justify;
+  margin: 1em auto;
+  max-width: 940px;
+}
+
+.clear{
+  clear: both;
+}
+
+h1, h2, p {
+  padding: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+a:hover{
+  color: maroon;
+  text-decoration: underline;
+}
+
+/* Header*/
+.header{
+  text-align: center;
+  padding: 3em 0;
+}
+
+h1, .subtitle, em{
+  padding: 0;
+}
+
+h1{
+  font-family: 'EraserRegular', Helvetica, Arial, sans-serif;
+  padding: 0 0 0.5em 0;
+}
+
+.subtitle{
+  font-size: 0.9em;
+}
+
+em{
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+/* Subheader */
+.subheader{
+  height: 100%;
+  min-height: 157px;
+  padding: 15px;
+  background: rgba(40,40,40, 0.1);
+}
+
+q {
+  display: block;
+  text-align: left;
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 10px solid rgba(40,40,40, 0.2);
+  font-family: 'RobotoSlab-light', Verdana, serif;
+  font-size: 1.4em;
+}
+
+#cv_photo img{
+  float: right;
+  margin-left: 15px;
+  box-shadow: 0px 0px 8px gray;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+#cv_photo img:hover{
+  box-shadow: 0px 0px 15px red;
+  border: 2px solid lightgray;
+}
+
+/* description */
+.description{
+  padding-left: 1em;
+}
+
+h2 {
+  padding-left: 0;
+  color: darkgray;
+}
+
+/* footer */
+
+#footer{
+  margin: 3em auto;
+}
+
+.copyright{
+  font-family: 'RobotoSlab-light', Verdana, serif;
+  text-align: right;
+  color: gray;
+  border-top: 6px solid rgba(40,40,40, 0.1);;
+}

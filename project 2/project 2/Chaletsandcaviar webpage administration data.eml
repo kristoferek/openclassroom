@@ -1,0 +1,140 @@
+Return-path: <krzysztof.michal.nowak@gmail.com>
+Envelope-to: krzysiek@gwps.pl
+Delivery-date: Sun, 30 Jul 2017 22:13:59 +0200
+Received: from mail by sm3.linuxpl.com with spam-scanned (Exim 4.88)
+	(envelope-from <krzysztof.michal.nowak@gmail.com>)
+	id 1dbub7-0007xP-Qn
+	for krzysiek@gwps.pl; Sun, 30 Jul 2017 22:13:59 +0200
+X-Spam-Checker-Version: SpamAssassin 3.3.2 (2011-06-06) on sm3.linuxpl.com
+X-Spam-Level: 
+X-Spam-Status: No, score=-10.0 required=5.0 tests=FREEMAIL_FROM,HTML_MESSAGE,
+	T_FILL_THIS_FORM_SHORT,WL_02 autolearn=disabled version=3.3.2
+Received: from mail-lf0-f46.google.com ([209.85.215.46])
+	by sm3.linuxpl.com with esmtps (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128)
+	(Exim 4.88)
+	(envelope-from <krzysztof.michal.nowak@gmail.com>)
+	id 1dbub7-0007xJ-M5
+	for krzysiek@gwps.pl; Sun, 30 Jul 2017 22:13:57 +0200
+Received: by mail-lf0-f46.google.com with SMTP id y15so106613563lfd.5
+        for <krzysiek@gwps.pl>; Sun, 30 Jul 2017 13:13:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=from:subject:to:message-id:date:user-agent:mime-version;
+        bh=Ma96NLTQMGIpo9BuNuj6rCHI3GPa+FiGmj1rnmJ9zhE=;
+        b=sJK2I16GwTrlDVOgNwlLfncQ6AROBUYFugrGpdJhYWPKQ0CVMW7kRe1VmnO41gNYbp
+         Cba53Zgj4qJnn6oVgdKXf4umL8TxPT1bEa7NV9fv/xHU5jOaEVaTUlo62libI0qktoks
+         7/WqEetYzt1aWiSnZMaxZ57mTnbwwOp/2IFvRslC37W0uiA+PCgN6EAYTJ7uOoPm/+aV
+         7HUupIalLXP/0X3mW7greimiqhno2o52y8Ee5Ln7VFFyZaMc54061B8AHh+CF6IZ1bPA
+         4ZK9kAMlVoQtZIL91gQY5XqWmu9aiAg/g1I/rzVBTkiG3Uw5Vi7OyBOCnzbU1C5MXUoT
+         dpPg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:subject:to:message-id:date:user-agent
+         :mime-version;
+        bh=Ma96NLTQMGIpo9BuNuj6rCHI3GPa+FiGmj1rnmJ9zhE=;
+        b=ZOIklkPMOE8/PykicyL+9FrogdI4KTJWUxkAw2nq9VmozkPVpU7b/aJbMzhZd4tdrH
+         EK5jT7bpL23ClKF8GXf3gzzhOC8xojGa/iO8otH4XhwMWLs+i3L+f57xZu4sYu+YZb91
+         7EDM4bHuGqcMYsU8cb3tlHu9ShyxE4ovVAl/N4vJF2fIQOdADqKH9Nkkd5e/BMGMe7CH
+         77NsuIln/Xnu/cN1XV0tdeooVxfY+/cEYMhA47iOpYQ9ktoRJAPtuPhb/bHRrTGkQezo
+         P9OmIHSxMGCxBDuMkCPIQ/rytsh+FoqxDYZq8gMc+3leIp1bjcq7Z9B2gtJJgK1YTMO4
+         ftkw==
+X-Gm-Message-State: AIVw1114Xq2atGfvVS4sS+hByRFrAtzBSF+FgW0fDkjHVpdlV6jj06tv
+	8DAjIrM+xggA8HAMvD8=
+X-Received: by 10.46.22.13 with SMTP id w13mr5457568ljd.76.1501445636678;
+        Sun, 30 Jul 2017 13:13:56 -0700 (PDT)
+Received: from [192.168.1.9] (apn-37-7-167-116.dynamic.gprs.plus.pl. [37.7.167.116])
+        by smtp.gmail.com with ESMTPSA id e11sm5068527lfg.37.2017.07.30.13.13.55
+        for <krzysiek@gwps.pl>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 30 Jul 2017 13:13:55 -0700 (PDT)
+From: =?UTF-8?Q?Krzysztof_Micha=c5=82_Nowak?=
+ <krzysztof.michal.nowak@gmail.com>
+Subject: Chaletsandcaviar webpage administration data
+To: Chalets and Caviar <krzysiek@gwps.pl>
+Message-ID: <b0013d6c-b4ec-f8fc-2c8f-64301ada714a@gmail.com>
+Date: Sun, 30 Jul 2017 22:14:02 +0200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101
+ Thunderbird/45.8.0
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="------------2DFAC299D3CCD5D10AEC86AF"
+X-SPF-Verification: pass
+X-DKIM-Verification: pass
+
+This is a multi-part message in MIME format.
+--------------2DFAC299D3CCD5D10AEC86AF
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+Thank you for cooperation. In case of any question do not hesitate to 
+contact me by email or phone.
+
+Your webpage operates under following address:
+
+http://coaching.o12.pl/project2
+
+To login to your administration panel, please use the following link:
+
+http://coaching.o12.pl/project2/wp-login.php
+
+
+To login please use the given name and password:
+name: *chaleteandcaviar*
+pass: *NoRm4l1Z4ti0N
+
+*In case of forgetting your password use:*
+*registration email: *info@chaletsandcaviar.com
+*
+Have fun!
+
+-- 
+Best regards
+Christopher Nowak
+krzysztof.michal.nowak@gmail.com 
+<mailto:%20krzysztof.michal.nowak@gmail.com>
+
+--------------2DFAC299D3CCD5D10AEC86AF
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    <p><font face="Calibri">Hi,<br>
+      </font></p>
+    <p><font face="Calibri">Thank you for cooperation. In case of any
+        question do not hesitate to contact me by email or phone.<br>
+      </font></p>
+    <p><font face="Calibri">Your webpage operates under following
+        address:</font></p>
+    <p><a href="http://coaching.o12.pl/project2"><font face="Calibri">http://coaching.o12.pl/project2</font></a></p>
+    <p><font face="Calibri">To login to your administration panel,
+        please use the following link:</font></p>
+    <p><a href="http://coaching.o12.pl/project2/wp-login.php"><font
+          face="Calibri">http://coaching.o12.pl/project2/wp-login.php</font></a></p>
+    <br>
+    To login please use the given name and password:<br>
+    <font face="Calibri">name: <b>chaleteandcaviar</b><br>
+      pass: <b>NoRm4l1Z4ti0N<br>
+        <br>
+      </b>In case of forgetting your password use:<b><br>
+      </b>registration email: <b><a class="moz-txt-link-abbreviated"
+          href="mailto:info@chaletsandcaviar.com">info@chaletsandcaviar.com</a><br>
+      </b></font><br>
+    Have fun!<br>
+    <br>
+    <div class="moz-signature">-- <br>
+      <font face="Georgia, Times New Roman, Times, serif"
+        color="#666666">Best regards<br>
+        Christopher Nowak<br>
+        <a href="mailto:%20krzysztof.michal.nowak@gmail.com"
+          style="font-size: small">krzysztof.michal.nowak@gmail.com</a></font><br>
+    </div>
+  </body>
+</html>
+
+--------------2DFAC299D3CCD5D10AEC86AF--

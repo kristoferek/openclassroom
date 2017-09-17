@@ -1,0 +1,186 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+    font-family: 'EraserRegular';
+    src: url('fonts/eraser_regular/EraserRegular-webfont.eot');
+    src: url('fonts/eraser_regular/EraserRegular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/eraser_regular/EraserRegular-webfont.woff') format('woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url('fonts/roboto_slab/RobotoSlab-Bold-webfont.eot');
+    src: url('fonts/roboto_slab/RobotoSlab-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto_slab/RobotoSlab-Bold-webfont.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'RobotoSlab-light';
+    src: url('fonts/roboto_slab/RobotoSlab-Light-webfont.eot');
+    src: url('fonts/roboto_slab/RobotoSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto_slab/RobotoSlab-Light-webfont.woff') format('woff');
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'RobotoSlab';
+    src: url('fonts/roboto_slab/RobotoSlab-Regular-webfont.eot');
+    src: url('fonts/roboto_slab/RobotoSlab-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto_slab/RobotoSlab-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+}
+
+/* Global styles*/
+body{
+  font-family: 'RobotoSlab', Verdana, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-align:justify;
+  background-image: url('../bg_gray.png');
+  background-position: left 10px top 40px;
+  background-size:100px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.clear{ /* Clear float*/
+  clear: both;
+}
+h2, p, q {
+  padding: 1em 1em 0 1em;
+}
+a {
+  text-decoration: none;
+  color: red;
+}
+a:hover{
+  color: maroon;
+  text-decoration: underline;
+}
+
+/* Layout */
+.main{
+  max-width: 100%;
+  background: rgba(40,40,40, 0.1);
+}
+.leftSide, .rightSide{
+  display: inline-block;
+  vertical-align: top;
+}
+.leftSide{
+  text-align: left;
+}
+
+.rightSide{
+  width: calc(100vw - 150px);
+  background: white;
+  padding: 1em;
+}
+
+/* Header*/
+h1{
+  font-family: 'EraserRegular', Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  padding: 0 0 0.5em 0;
+}
+.rightSide > header{
+  text-align: center;
+  padding: 3em 1em;
+}
+.subtitle{
+  font-size: 0.9em;
+}
+.subtitle, .subtitle em{
+  padding: 0;
+}
+.subtitle em{
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Aside */
+.leftSide {
+  height: 100vh;
+  min-width: 120px;
+  padding: 15px;
+}
+
+q {
+  display: block;
+  padding: 2em 0 0 0;
+  font-size: 1.4em;
+}
+
+#cv_photo img{
+  float: right;
+  margin-left: 15px;
+  box-shadow: 0px 0px 8px gray;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+#cv_photo img:hover{
+  box-shadow: 0px 0px 15px red;
+  border: 2px solid lightgray;
+}
+
+/* main */
+#career, #skills, #education{
+  width: 33%;
+  display: inline-block;
+  padding: 5px;
+  vertical-align: top;
+}
+
+.description{
+  padding-left: 1em;
+}
+
+h2 {
+  padding-left: 0;
+  color: darkgray;
+}
+
+
+
+/* footer */
+
+footer{
+  margin: 3em auto;
+}
+
+.copyright{
+  font-family: 'RobotoSlab-light', Verdana, serif;
+  text-align: right;
+  color: gray;
+  border-top: 6px solid rgba(40,40,40, 0.1);;
+}
+
+@media (max-width: 1040px){
+  #career, #skills, #education{
+    width: 40%;
+  }
+}
+
+
+@media (max-width: 740px){
+  .leftSide{
+    display: none;
+  }
+  .rightSide{
+    display: block;
+    width: auto;
+  }
+  #cv_photo img{
+    float: none;
+    margin-bottom: 2em;
+  }
+  #career, #skills, #education{
+    width: auto;
+    display: block;
+    padding: 5px;
+  }
+}
