@@ -1,0 +1,59 @@
+body{
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-size: 16px;
+  background-image: url('http://lorempixel.com/1920/1920/abstract');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.clock{
+  width: 250px;
+  height: 250px;
+  margin: 200px auto;
+  border: 5px solid white;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.second-hand, .minute-hand, .hour-hand{
+  background: white;
+  position: absolute;
+  border-radius: 1px;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: center bottom;
+  transition-duration: 0.05s;
+  transition-timing-function:cubic-bezier(0, 0.2, 0.5, 2);
+}
+
+.second-hand{
+  width: 2px;
+  height: 120px;
+  background: orange;
+}
+
+.minute-hand{
+  width: 3px;
+  height: 110px;
+  left: calc(50% - 1.5px);
+}
+.hour-hand{
+  width: 5px;
+  height: 80px;
+  border-radius: 20% 20% 0 0;
+  left: calc(50% - 2px);
+}
+
+.center-circle{
+  position: absolute;
+  left: calc(50% - 7px);
+  bottom: calc(50% - 7px);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+}
