@@ -10,13 +10,14 @@ body{
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  background-color: rgb(247, 245, 219);
+  background-color: rgb(251, 244, 247);
 }
 
 header {
   min-height: 60px;
   padding: 20px 20px;
-  background-color: rgb(227, 225, 199);
+  background-color: rgb(242, 195, 216);
+  color: rgb(193, 6, 89);
 }
 
 header h1{
@@ -50,18 +51,41 @@ label{
   display: none;
 }
 
-#answer{
+button{
+  background-color: rgb(242, 195, 216);
+  border: 1px solid black;
+  padding: 5px;
+}
+button:hover{
+  background-color: rgb(246, 125, 179);
+}
+
+#result{
   min-height: 1em;
+  margin: 0 20px;
+  margin-top: 20px;
   padding: 10px;
-  font-size: 2em;
-  line-height: 1.6em;
-  font-style: italic;
-  padding-left: 20px;
-  background-color: rgb(27, 25, 19);
-  color: white;
+  background-color: rgb(242, 195, 216);
+  background-image: url('../images/hearts.jpg');
+  background-size: contain;
   border: 3px solid rgb(132, 140, 153);
 }
 
+#answer{
+  padding-left: 20px;
+  line-height: 1.4em;
+  font-style: italic;
+  font-weight: 700;
+  font-family: Courier, monospace;
+  font-size: 2em;
+  color: rgb(245, 32, 121);
+  text-shadow: 0px 0px 10px pink;
+}
+
 #answer.sample{
-  color: rgb(193, 191, 165);
+  color: rgb(245, 98, 160);
+}
+
+a{
+  color: rgb(193, 6, 89);
 }
