@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Concatenator</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>
+        Polite FCKU composer
+      </h1>
+    </header>
+    <section id="introduction">
+      <p>There is sometimes a situation of a difficult choice in everyone's life - the choice of being polite and necessity of immediate refusal. The spontaneous reaction often equips us with quick and rarely eloquent response like "Go fuck yourself!". Here you have a unique possibility to compose polite and calm phrase that will help you replace this moderately useful automatic reaction.</p>
+    </section>
+    <section id="controls">
+      <label for="interlocutor">Name of your favorite interlocutor:</label>
+      <input type="text" name="interlocutor" id="interlocutor" value="" placeholder="Peter">
+      <div class="alert hidden">
+        *This field can not be empty
+      </div>
+
+      <label for="activity">In few word describe the activity or subject to wich you disagree:</label>
+      <input type="text" name="activity" id="activity" value="" placeholder="playing chess">
+      <div class="alert hidden">
+        *This field can not be empty
+      </div>
+
+      <label for="length">Choose complexity of the answer</label>
+      <input type="range" name="length" value="1" min="1" max="3" step="1">
+      <br>
+      <button type="button" name="button" value="" onclick="handleGeneratePhrase()">Generate phrase</button>
+    </section>
+    <section id="result">
+      <div id="answer" class="sample">
+        Your polite and assertive answer will appear here.
+      </div>
+    </section>
+    <footer>
+      &copy; Copyright <a href="http://github.com/kristoferek">Chris</a>
+    </footer>
+
+  </div>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

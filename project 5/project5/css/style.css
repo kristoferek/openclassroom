@@ -1,0 +1,52 @@
+body{
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(247, 245, 219);
+}
+
+header {
+  min-height: 60px;
+  padding: 20px;
+  background-color: rgb(227, 225, 199);
+}
+
+section {
+  padding: 20px;
+}
+
+label{
+  display: block;
+  width: 100%;
+}
+
+.alert{
+  color: red;
+  font-size: 0.8em;
+}
+
+.hidden{
+  display: none;
+}
+
+#answer{
+  min-height: 3em;
+  padding: 10px;
+  font-size: 2em;
+  line-height: 1.6em;
+  font-style: italic;
+  padding-left: 20px;
+  background-color: rgb(227, 225, 199);
+}
+
+#answer.sample{
+  color: rgb(193, 191, 165);
+}
