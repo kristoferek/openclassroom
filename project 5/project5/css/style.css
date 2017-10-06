@@ -15,12 +15,25 @@ body{
 
 header {
   min-height: 60px;
-  padding: 20px;
+  padding: 20px 20px;
   background-color: rgb(227, 225, 199);
 }
 
-section {
-  padding: 20px;
+header h1{
+  font-size: 40px;
+  line-height: 60px;
+  margin: 0;
+}
+
+section, footer {
+  padding: 10px 20px;
+}
+footer{
+  height: 40px;
+  text-align: right;
+}
+.main{
+  min-height: calc(100vh - 100px - 60px);
 }
 
 label{
@@ -38,13 +51,15 @@ label{
 }
 
 #answer{
-  min-height: 3em;
+  min-height: 1em;
   padding: 10px;
   font-size: 2em;
   line-height: 1.6em;
   font-style: italic;
   padding-left: 20px;
-  background-color: rgb(227, 225, 199);
+  background-color: rgb(27, 25, 19);
+  color: white;
+  border: 3px solid rgb(132, 140, 153);
 }
 
 #answer.sample{
