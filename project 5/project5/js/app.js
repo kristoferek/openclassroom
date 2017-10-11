@@ -2,26 +2,51 @@
 
 var salutations = [
   "Dear",
-  "My beloved"
+  "My beloved",
+  "My procious",
+  "Sweet",
+  "Enchanting",
+  "Adorable"
 ];
 var refusals = [
   "I think",
   "In my humble opinion",
   "After a careful analisys I realize that",
-  "After a deep thought I conclude that"
+  "After a deep thought I conclude that",
+  "Actually",
+  "I'm afraid",
+  "To be honest,",
+  "I'm not quite satisfied with this idea. I must admit that",
+  "I really appreciate your proposal, but",
+  "Normally I'd be able to, but",
+  "I wish I could, but",
+  "I'd love to but"
 ];
 var reasons = [
   "is not the most desired activity for me at the moment.",
-  "is the last thing I am about to consider now."
+  "is the last thing I am about to consider at the moment.",
+  "is beyond my today's ability to do anything.",
+  "makes me look so funny and stupid that I'm not going to risk.",
+  "makes me fill so unimportant and depressed. Oh my...",
+  "is for me like asking a pig to fly.",
+  "is asking me to dig a deep grave to bury myself immediately.",
+  "is like to lunge at the sun with a hoe.",
+  "is not something that I'm going to shed my  blood for.",
+  "will put me at a disadvantage. I'm in pain everywhere."
 ];
 var recapitulations = [
-  "In fact I don't think that it will ever be!",
-  "Honestly saying I have currently far more pleasant things to do with really nice people."
+  "In fact I don't think that I will ever be ready for this!",
+  "Honestly saying I have currently far more pleasant things to do with really nice people.",
+  "I don't think I could be more confused with your idea.",
+  "It's so truely indecent that I already fill shivers on my back.",
+  "I fact I'm not sure if it's even legal.",
+  "Wouldn't that be extreamly exciting to do it by yourself alone?",
+  "Who else have you tried to convince that you are the right person for this moderatly interesting activity?"
 ];
 
 // Object composing complete phrase concatenated from passed arguments
 function phrase(salutation, name, refusal, activity, reason, recapitulation){
-    this.value = salutation + " " + name + "! " + refusal + " " + activity + " " + reason + " " + recapitulation;
+    this.value = `${salutation} ${name}! ${refusal} ${activity} ${reason} ${recapitulation}`;
 }
 // Prototype function displaying complete phrase in selector with passed id
 phrase.prototype.display = function(id) {
@@ -69,7 +94,6 @@ function handleGeneratePhrase(){
 
     // Generate randomly composed new phrase depending on chosen complexity
     var complexity = document.getElementById('complexity').value;
-    console.log(complexity);
     switch (complexity) {
       case '2':
         var newPhrase = new phrase(salutations[salutationIndex], interlocutorName, refusals[refusalIndex], activity, reasons[reasonsIndex],"");

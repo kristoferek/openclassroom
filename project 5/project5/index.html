@@ -2,50 +2,80 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Concatenator</title>
+  <meta name="description" content="Simple and funny way to compose assertive refusal.">
+
 </head>
 
 <body>
   <div class="container">
-    <header>
-      <h1>
-        Polite FCKU composer
-      </h1>
+    <header class="row">
+      <div class="hidden-xs col-sm-1">
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <h1>
+          Polite <br>FCKU <br>Composer
+        </h1>
+      </div>
+      <div class="hidden-xs col-sm-1">
+      </div>
     </header>
     <div class="main">
-      <section id="introduction">
-        <p>There is sometimes a situation of a difficult choice in everyone's life - the choice of being polite and necessity of immediate refusal. The spontaneous reaction often equips us with quick and rarely eloquent response like "Go fuck yourself!". Here you have a unique possibility to compose polite and calm phrase that will help you replace this moderately useful automatic reaction.</p>
-      </section>
-      <section id="controls">
-        <label for="interlocutor">Name of your favorite interlocutor:</label>
-        <input type="text" name="interlocutor" id="interlocutor" value="" placeholder="Peter">
-        <div class="alert hidden">
-          *This field can not be empty
+      <section id="introduction" class="row">
+        <div class="hidden-xs col-sm-1">
         </div>
+        <div class="col-xs-12 col-sm-10">
+          There is sometimes a situation of a difficult choice in everyone's life - the choice of being polite and necessity of immediate refusal. The spontaneous reaction often equips us with quick and rarely eloquent response like:
+          <blockquote cite="http://">
+            Go f...ck yourself!
+          </blockquote>
 
-        <label for="activity">In few word describe the activity or subject to wich you disagree:</label>
-        <input type="text" name="activity" id="activity" value="" placeholder="playing chess">
-        <div class="alert hidden">
-          *This field can not be empty
+          Here you have a unique possibility to compose polite and calm phrase that will help you replace this moderately useful automatic reaction and leave your interlocutor speachless.
         </div>
-
-        <label for="length">Choose complexity of the answer</label>
-        <input type="range" name="complexity" id="complexity" value="1" min="1" max="3" step="1">
-        <br>
-        <button type="button" name="button" value="" onclick="handleGeneratePhrase()">Generate phrase</button>
+        <div class="hidden-xs col-sm-1">
+        </div>
       </section>
-      <section id="result">
-        <div id="answer" class="sample">
-          Your polite and assertive answer will appear here.
+      <section id="controls" class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+          <label for="interlocutor">Name of your favorite interlocutor:</label>
+          <input type="text" class="form-control" name="interlocutor" id="interlocutor" value="" placeholder="Peter">
+          <div class="alert hidden">
+            *This field can not be empty
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+          <label for="activity">In few word describe the activity or subject to wich you disagree:</label>
+          <input type="text" class="form-control" name="activity" id="activity" value="" placeholder="playing chess">
+          <div class="alert hidden">
+            *This field can not be empty
+          </div>
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">
+          <label for="length">Choose the complexity of an answer</label>
+          <input type="range" name="complexity" id="complexity" value="1" min="1" max="3" step="1">
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">
+          <button class="btn" type="button" name="button" value="" onclick="handleGeneratePhrase()">Generate phrase</button>
+        </div>
+      </section>
+      <section id="result" class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <div id="answer">
+            Your polite and assertive answer will appear here.
+          </div>
         </div>
       </section>
     </div>
-    <footer>
-      <div class="">
+    <footer class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <a class="hidden" href="http://www.freepik.com/free-vector/pink-valentines-pattern-with-hearts-and-plants_1023157.htm">Pattern designed by Freepik</a>
+        &copy; Copyright <a href="http://github.com/kristoferek">Chris</a>
       </div>
-        <a href="http://www.freepik.com/free-vector/pink-valentines-pattern-with-hearts-and-plants_1023157.htm">Pattern designed by Freepik</a> :: &copy; Copyright <a href="http://github.com/kristoferek">Chris</a>
     </footer>
 
   </div>
