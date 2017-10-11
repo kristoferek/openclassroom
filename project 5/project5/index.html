@@ -4,11 +4,29 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
+  <meta name="description" content="Simple, funny and a bit suicidal way to compose assertive refusal.">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="Simple, funny and a bit suicidal way to compose assertive refusal."/>
+  <meta name="twitter:site" content="@kristoferekuku"/>
+  <meta name="twitter:title" content="Polite FCKU Composer"/>
+  <meta name="twitter:description" content="Simple, funny and a bit suicidal way to compose assertive refusal."/>
+  <meta name="twitter:creator" content="@kristoferekuku"/>
+  <meta name="twitter:image" content="http://coaching.o12.pl/project5/images/icon.jpg"/>
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Polite FCKU Composer" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://coaching.o12.pl/project5/" />
+  <meta property="og:image" content="http://coaching.o12.pl/project5/images/icon.jpg" />
+  <meta property="og:description" content="Simple, funny and a bit suicidal way to compose assertive refusal." />
+  <meta property="og:site_name" content="FCKU composer" />
+  <meta property="fb:admins" content="kristoferekuku" />
+
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="./css/style.css">
-  <title>Concatenator</title>
-  <meta name="description" content="Simple and funny way to compose assertive refusal.">
+  <title>Polite FCKU Composer</title>
 
 </head>
 
@@ -45,22 +63,22 @@
           <label for="interlocutor">Name of your favorite interlocutor:</label>
           <input type="text" class="form-control" name="interlocutor" id="interlocutor" value="" placeholder="Peter">
           <div class="alert hidden">
-            *This field can not be empty
+            *This field should contain letters or numbers and can not be empty
           </div>
         </div>
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
           <label for="activity">In few word describe the activity or subject to wich you disagree:</label>
           <input type="text" class="form-control" name="activity" id="activity" value="" placeholder="playing chess">
           <div class="alert hidden">
-            *This field can not be empty
+            *This field should contain letters or numbers and can not be empty
           </div>
         </div>
         <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">
           <label for="length">Choose the complexity of an answer</label>
-          <input type="range" name="complexity" id="complexity" value="1" min="1" max="3" step="1">
+          <input type="range" name="complexity" id="complexity" value="1" min="1" max="3" step="1" onchange="handleComplexity()">
         </div>
-        <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">
-          <button class="btn" type="button" name="button" value="" onclick="handleGeneratePhrase()">Generate phrase</button>
+        <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+          <button class="btn" type="button" id="generate" name="button" value="" onclick="handleGeneratePhrase()">Generate <strong>short</strong> phrase</button>
         </div>
       </section>
       <section id="result" class="row">
