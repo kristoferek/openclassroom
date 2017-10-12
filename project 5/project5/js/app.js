@@ -1,4 +1,4 @@
-// Composing and displaying polite phrase
+// Composing and displaying polite sentence
 
 var salutations = [
   "Dear",
@@ -8,6 +8,19 @@ var salutations = [
   "Enchanting",
   "Adorable"
 ];
+var names =[
+  "Peter",
+  "Susan",
+  "Naomi",
+  "Sherlock",
+  "Watson",
+  "Deborah",
+  "Mom",
+  "Son",
+  "Dad",
+  "God",
+  "Ego"
+]
 var refusals = [
   "I think",
   "In my humble opinion",
@@ -22,6 +35,19 @@ var refusals = [
   "I wish I could, but",
   "I'd love to, but"
 ];
+var activities = [
+  "speed dating",
+  "playing dumb",
+  "fighting",
+  "going to restaurant",
+  "composing uverture",
+  "flying to Zambezi",
+  "cleaning",
+  "washing my ears",
+  "being nice",
+  "responding",
+  "shooting president"
+]
 var reasons = [
   "is not the most desired activity for me at the moment.",
   "is the last thing I am about to consider at the moment.",
@@ -44,103 +70,155 @@ var recapitulations = [
   "Who else have you tried to convince that you are the right person for this moderatly interesting activity?"
 ];
 
-// Object composing complete phrase concatenated from passed arguments
-function phrase(salutation, name, refusal, activity, reason, recapitulation){
-    this.value = `${salutation} ${name}! ${refusal} ${activity} ${reason} ${recapitulation}`;
+// Compose complete sentence concatenated from passed arguments
+function cmoposeSentence(salutation, name, refusal, activity, reason, recapitulation){
+    return `${salutation} ${name}! ${refusal} ${activity} ${reason} ${recapitulation}`;
 }
-// Prototype function displaying complete phrase in selector with passed id
-phrase.prototype.display = function(id) {
+
+// Display content in selector with specified id
+function displayHTML(content, id) {
   var result = document.getElementById(id);
-  result.classList.remove('sample');
-  result.innerText = this.value;
+  if (result) {
+
+    result.innerText = content;
+  } else {
+    console.log('Selector of id=', id, ' not found');
+  }
+}
+
+// Take care for letter case of a string
+function changeCase(string, caseType){
+
+  switch (caseType) {
+    //Title Case
+    case 'title':
+      // If string[i] is " " make string[i+1] uppercase
+      // initialy true for first letter Uppercsae
+      var result= "";
+      var nextCharUpperCase = true;
+      for (var i = 0; i < string.length; i++) {
+        // if nextCharUpperCase is true make string[i] uppercase
+        result += nextCharUpperCase
+          ? string[i].toUpperCase()
+          : string[i].toLowerCase();
+        // set nextCharUpperCase true if string[i] is " "
+        nextCharUpperCase = (string[i] ===" ");
+      }
+      return result;
+      // break;
+
+    // Sentence case
+    case 'sentence':
+      return string.substr(0, 1).toUpperCase() + string.substr(1, string.length-1);
+
+    // lower case
+    case 'lower':
+      return string.toLowerCase();
+
+    // do nothing
+    default:
+      return string;
+  }
+}
+
+// Get random array element
+function randomArrElement(arr){
+  var randomIndex = arr.length > 1 ? Math.floor(Math.random() * (arr.length)) : 0;
+  return arr[randomIndex];
 }
 
 // Function validating and returning input values
-function handleInput(id){
+function getInputValue(id){
+
+  // Find input with given id
   var inputField = document.querySelector(`input[id="${id}"]`);
 
-  // If input field is empty or not "a word" show warning
-  if (inputField.value.search(/\w/) < 0) {
-    inputField.nextElementSibling.classList.remove('hidden');
-    return undefined;
-  } else {
-    inputField.nextElementSibling.classList.add('hidden');
-    return inputField.value;
-  }
-}
-
-// Generate random index function
-function getRandomIndex(arrayLength) {
-    return Math.floor(Math.random() * (arrayLength));
-}
-
-// Make string Title Case
-function titleCase(string){
-  var title= "";
-  var nextCharUpperCase = true;
-  for (var i = 0; i < string.length; i++) {
-    title += nextCharUpperCase
-      ? string[i].toUpperCase()
-      : string[i];
-     nextCharUpperCase = (string[i] ===" ");
-  }
-  return title;
-}
-
-// Function displaying phrase depending input
-function handleGeneratePhrase(){
-  var interlocutorName = handleInput('interlocutor');
-  var activity = handleInput('activity');
-
-  // If interlocutor and activity inputs are not empty
-  if (activity!=undefined && interlocutorName!=undefined) {
-    // Make every interlocutor name lowercase with first capital letter
-    var interlocutorName = titleCase(interlocutorName);
-    // Make activity words lowercase in the middle of sentence
-    activity = activity.toLowerCase();
-    // Make activity words lowercase with first letter capital at the  beggining of santence
-    activityUpperCase =  activity.substr(0, 1).toUpperCase() + activity.substr(1, activity.length-1);
-
-    // Generate random indexes
-    var salutationIndex = getRandomIndex(salutations.length);
-    var refusalIndex =  getRandomIndex(refusals.length);
-    var reasonsIndex = getRandomIndex(reasons.length);
-    var recapitulationIndex =  getRandomIndex(recapitulations.length);
-
-    // Generate randomly composed new phrase depending on chosen complexity
-    var complexity = document.getElementById('complexity').value;
-    switch (complexity) {
-      // moderately complex
-      case '2':
-        var newPhrase = new phrase(salutations[salutationIndex], interlocutorName, refusals[refusalIndex], activity, reasons[reasonsIndex],"");
-        break;
-      // complex
-      case '3':
-        var newPhrase = new phrase(salutations[salutationIndex], interlocutorName, refusals[refusalIndex], activity, reasons[reasonsIndex], recapitulations[recapitulationIndex]);
-        break;
-      // simple
-      default:
-        var newPhrase = new phrase(salutations[salutationIndex], interlocutorName, "", activityUpperCase, reasons[reasonsIndex], "");
-
+  // If  input field exist and is text type validate
+  if (inputField.type === "text"){
+    // If input field is empty or not "a word" show warning
+    if (inputField.value.search(/\w/) < 0) {
+      inputField.nextElementSibling.classList.remove('hidden');
+      return false;
+    } else {
+      inputField.nextElementSibling.classList.add('hidden');
+      return inputField.value;
     }
-    // Display new phrase
-    newPhrase.display("answer");
+  } else if (inputField.type === "range") {
+    return inputField.value;
+  } else {
+    console.log('handleInputText(', id, ') failed querying selector');
   }
 }
 
-function handleComplexity(){
-  var inputRange = document.getElementById('complexity').value;
-  var buttonGenerate = document.getElementById('generate');
+// Generate sentence depending on complexity
+function generateRandomStatement(interlocutorName, activity, complexity){
+  // make name Title Case
+  var name = changeCase(interlocutorName, 'title');
+
+  switch (complexity) {
+    // long sentence
+    case '3':
+      // make activity lower case
+      var action = changeCase(activity, 'lower')
+      var randomSentence = cmoposeSentence(randomArrElement(salutations), name, randomArrElement(refusals), action, randomArrElement(reasons), randomArrElement(recapitulations));
+      break;
+    // medium sentence
+    case '2':
+      // make activity lower case
+      action = changeCase(activity, 'lower')
+      var randomSentence = cmoposeSentence(randomArrElement(salutations), name, randomArrElement(refusals), action, randomArrElement(reasons),"");
+      break;
+    // short sentence
+    default:
+      // make activity Sentence case
+      action = changeCase(activity, 'sentence')
+      var randomSentence = cmoposeSentence(randomArrElement(salutations), name, "", action, randomArrElement(reasons), "");
+  }
+  return randomSentence;
+}
+
+// Handle button click and display sentence randomly generated from six parts:
+// salutation + name + refusal + activity + reason + recapitulations
+function handleClickDefaultButton(rangeId, targetId){
+  var newContent = generateRandomStatement(randomArrElement(names), randomArrElement(activities), getInputValue(rangeId))
+  displayHTML(newContent, targetId);
+}
+
+// Handle button click and display sentence randomly generated of six parts
+// including custom input fields:
+// salutation + input[name] + refusal + input[activity] + reason + recapitulations
+function handleClickCustomButton(nameId, activityId, rangeId, targetId){
+
+  // Get user input values
+  var interlocutorName = getInputValue(nameId);
+  var activity = getInputValue(activityId);
+  var complexity = getInputValue(rangeId);
+
+  // If propelly validated text inputs
+  if (activity !== false && interlocutorName !== false) {
+    // Generate new sentence
+    var newContent = generateRandomStatement(interlocutorName, activity, complexity);
+    // Display new sentence
+    displayHTML(newContent, targetId);
+  }
+}
+
+// Handle complexity change and change text on the button
+function handleChangeComplexity(e, rangeId, targetId){
+  var inputRange = e.target.value;
+  var targetElement = document.getElementById(targetId);
   switch (inputRange) {
     case '2':
-      buttonGenerate.innerHTML = "Generate <strong>medium</strong> phrase";
+      targetElement.innerHTML = "<strong>Medium</strong><br/> sentence";
+      targetElement.className = "text-center";
       break;
     case '3':
-      buttonGenerate.innerHTML = "Generate <strong>long</strong> phrase";
+      targetElement.innerHTML = "<strong>Long</strong><br/>  sentence";
+      targetElement.className = "text-right";
       break;
     default:
-    case '2':
-      buttonGenerate.innerHTML = "Generate <strong>short</strong> phrase";
+      targetElement.innerHTML = "<strong>Short</strong><br/> sentence";
+      targetElement.className = "text-left";
       break;
   }
 }
