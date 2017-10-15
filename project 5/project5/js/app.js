@@ -70,6 +70,19 @@ var recapitulations = [
   "Who else have you tried to convince that you are the right person for this moderatly interesting activity?"
 ];
 
+// Max number of quotation combinations
+function maxCombinations(...arrays){
+  var max = 1;
+  // Multiply lenght of each array given as function argument
+  for (var i = 0; i < arrays.length; i++) {
+    // Proceed only if arrays[i] is an Array
+    if (arrays[i].constructor === Array) {
+      max ? max *= arrays[i].length : max;
+    }
+  }
+  return max;
+}
+
 // Compose complete sentence concatenated from passed arguments
 function cmoposeSentence(salutation, name, refusal, activity, reason, recapitulation){
     return `${salutation} ${name}! ${refusal} ${activity} ${reason} ${recapitulation}`;
@@ -222,3 +235,140 @@ function handleChangeComplexity(e, rangeId, targetId){
       break;
   }
 }
+
+// -------------------------------- Console functions --------------------------
+
+// Information for console user
+var messageErr = "Hmm... I don't understand. Try again!\n";
+var message = "\nType your choice:\n\n R - One random quotation\n C - One customised random quotation\n M - 1-5 random quotations\n N - 1-5 random customised quotations\n Q - to exit program";
+
+// Prompts for user choice
+function promptWindow(type){
+
+  var p = (type === 'err')
+    // error prompt message
+    ? prompt(messageErr + message)
+    // standard prompt message if
+    : prompt(message);
+
+  return (p !== null)
+    ? p.toLowerCase()
+    : null;
+}
+
+// Prompts for number
+function promptNumber(){
+  var quotationNumber = Math.round(Number(prompt("How many sentences you wish (1-5)?")));
+  return (0 < quotationNumber && quotationNumber < 6)
+    ? quotationNumber
+    : 0;
+}
+
+// Prompts for number
+function promptNameAndActivity(){
+  var name = prompt("What is name of your favorite interlocutor?");
+  var activity = prompt("What is the activity that you hate doing?");
+
+  // Returns array of arrays to use with spread operator in randomSentences function as it accepts arrays as arguments.
+  return [[name], [activity]];
+}
+
+// Return set of random different senteces.
+function randomSentences(names, activities, quantity){
+  // Just in case - if specified quantity is out of range
+  if (quantity == 0){
+    console.log(Error("Number out of range (1-5)"));
+    return [];
+  // Just in case - if user wishes more unique quotations than there is possible
+  } else if (quantity > maxCombinations(salutations, names, refusals, activities, reasons, recapitulations)){
+    console.log(Error('Not enough different combinations'));
+    return [];
+  }
+
+  // Add first random sentence to array
+  var newSentence = generateRandomStatement(randomArrElement(names), randomArrElement(activities), '3');
+  var arrayOfSentences = [newSentence];
+
+  // Add more different sentences to array
+  var i = 1;
+  while (i < quantity) {
+    newSentence = generateRandomStatement(randomArrElement(names), randomArrElement(activities), '3');
+    // If newSentence is unique add to it to array
+    if (arrayOfSentences.indexOf(newSentence) < 0) {
+      arrayOfSentences.push(newSentence);
+      i++;
+    }
+  }
+  return arrayOfSentences;
+}
+
+// Logs array of random sentences in console
+function logArray(array){
+  if (array.length === 1){
+    // Log single array element
+    console.log(array[0]);
+  } else if (array.length > 1) {
+    // Log numbered list of array elements
+    array.forEach(function(el, i){
+      console.log(`${i+1}. ${el}`);
+    });
+  } else {
+    console.log(Error("Empty array of sentences"));
+  }
+}
+
+// Display instructions in console
+function logInfo(stage){
+  if (stage !== "end"){
+    console.log('----- RANDOM QUOTATIONS -----');
+    console.log('Program generates random quotations in console.\n ');
+     console.log('Here you have a unique possibility to compose polite and calm phrase that will help you replace moderately useful automatic reaction and leave your interlocutor speachless.');
+    console.log('You can customise interlocutor name and activity to wich you disagree.\n ');
+    console.log('\n----- To start program');
+    console.log('----- type in console');
+    console.log('----- start();');
+    console.log(message);
+  } else {
+    console.log('\n----- To restart program simply');
+    console.log('----- type start() again.');
+  }
+}
+
+// Generates all results in console
+function start(){
+
+  // Ask for user choice
+  var yourChoice = promptWindow();
+
+  // Operate untill "q" is pressed
+  while (yourChoice != "q") {
+    switch (yourChoice) {
+      // Random sentence
+      case 'r':
+        logArray(randomSentences(names, activities, 1))
+        yourChoice = promptWindow();
+        break;
+      // Customised sentence
+      case 'c':
+        logArray(randomSentences(...promptNameAndActivity(), 1));
+        yourChoice = promptWindow();
+        break;
+      // Many random sentences
+      case 'm':
+        logArray(randomSentences(names, activities, promptNumber()));
+        yourChoice = promptWindow();
+        break;
+        // Many customised random sentences
+      case 'n':
+        logArray(randomSentences(...promptNameAndActivity(), promptNumber()));
+        yourChoice = promptWindow();
+        break;
+      // Undefined key pressed
+      default:
+        yourChoice = promptWindow('err');
+    }
+  }
+  logInfo('end');
+}
+
+logInfo();

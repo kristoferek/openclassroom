@@ -74,6 +74,13 @@ button.btn:hover{
   color: white;
 }
 
+button#generate-custom.btn{
+  background-color: #903d3d;
+}
+button#generate-custom.btn:hover{
+  background-color: #594040;
+}
+
 #answer{
   padding: 20px;
   font-family: Radley, serif;
