@@ -5,7 +5,7 @@ body {
     margin-right: 30px;
 }
 
-span {
+.link span {
     font-weight: normal;
     font-size: 80%;
 }
@@ -14,4 +14,33 @@ span {
     background: white;
     padding: 10px;
     margin-bottom: 10px;
+}
+
+.hidden{
+  display: none;
+}
+
+#controls, #controls > *{
+  margin-bottom: 10px;
+}
+
+button{
+  padding: 5px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+input{
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 3px;
+  border: none;
+  border: 1px solid gray;
+}
+
+.success{
+  padding: 15px;
+  font-size: 2em;
+  color: rgba(3, 168, 109, 1);
+  background-color: rgba(97, 246, 192, 0.47);
 }
