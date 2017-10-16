@@ -154,7 +154,7 @@ message.appendChild(document.createTextNode('" was successfully added'));
 
 // Create form fields and button
 var buttonAddItem =  createDOMElement('button', 'button', 'addItem', 'Add Item', '', 'addItem');
-buttonAddItem.appendChild(document.createTextNode('Add Item'));
+buttonAddItem.appendChild(document.createTextNode('Add link'));
 var titleInput = createDOMElement('input', 'text', 'title', '', 'Title');
 var authorInput = createDOMElement('input','text', 'author', '', 'Author Name');
 var linkInput = createDOMElement('input', 'text', 'linkUrl', '', 'http://yoururl.com');
