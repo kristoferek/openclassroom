@@ -1,0 +1,10 @@
+East Village Vinyl by Christopher Nowak
+
+html, css, js
+https://codepen.io/kristoferek/pen/oGJqYw
+
+html of album section
+https://codepen.io/kristoferek/pen/eGbwvN.html
+
+JSON file with albums
+https://codepen.io/kristoferek/pen/oGJPPO.js
