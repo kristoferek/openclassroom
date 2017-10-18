@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* Reset */
+*{
+  box-sizing: border-box;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  font-family: Roboto, Helvetica, sans-serif;;
+  margin: 0;
+  padding: 0
+}
+
+/* General */
+body{
+  width: 100%;
+  background-color: rgb(6, 0, 17);
+  background-image: url('http://coaching.o12.pl/Vinyl/vinyl_animated.gif');
+  background-size: cover;
+  background-position: center;
+}
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(11, 0, 29, 0.5);
+}
+
+header, section, footer{
+  padding: 0 10px;
+}
+
+header, footer{
+  background-color: rgba(0, 0, 9, 0.5);
+}
+
+a, a:active, a:visited{
+  color: white;
+}
+a:hover{
+  color: rgb(157, 196, 255);
+}
+
+/* Header */
+nav li{
+  height: 38px;
+  padding: 10px 5px;
+}
+
+nav li:hover{
+  background-color: rgba(130, 122, 148, 0.32);
+}
+
+/* Main content */
+.mainContent{
+  min-height: calc(100vh - 114px - 38px);
+}
+
+.mainContent h1{
+  font-size: 3em;
+  padding: 50px 10px;
+  text-align: center;
+}
+
+.waiting{
+  font-size: 2em;
+  padding: 50px 10px;
+  text-align: center;
+}
+.albums{
+  list-style: none;
+  padding: 10px 0;
+}
+
+.albums li{
+  border-bottom: 1px solid white;
+  padding: 10px 50px 10px 10px;
+  position: relative;
+}
+
+/* Outer circle */
+.albums li::before{
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  right: 0;
+  top: 7px;
+  content: "";
+}
+
+/* Inner circle */
+.albums li::after{
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 11px;
+  top: 18px;
+  content: "";
+}
+
+.details{
+  display: inline-block;
+  font-size: 0.8em;
+  padding-right: 10px;
+}
+
+/* Footer */
+.copyright{
+  height: 38px;
+  padding: 10px 0;
+  text-align: right;
+  color: gray;
+}
+
+/* Media queries for larger screens */
+
+/* larger then 300px */
+@media (min-width: 299px) {
+  header, section, footer{
+    padding: 0 10px;
+  }
+  .mainContent{
+    min-height: calc(100vh - 76px);
+  }
+  nav li {
+    display: inline-block;
+    padding: 10px 10px 10px 5px;
+  }
+  .mainContent h1{
+    font-size: 4em;
+    padding: 50px 20px;
+  }
+}
+
+/* larger then 830px */
+@media (min-width: 830px) {
+  .container{
+    max-width: 800px;
+    min-height: calc(100vh - 100px);
+    margin: 50px auto;
+    box-shadow: 10px 10px 30px rgba(212, 212, 212, 0.25), -2px -2px 5px rgba(212, 212, 212, 0.1);
+  }
+  .mainContent{
+    min-height: calc(100vh - 100px - 76px);
+  }
+  .mainContent h1{
+    font-size: 5em;
+    padding: 50px;
+  }
+  header, section, footer{
+    padding: 0 30px;
+  }
+}
