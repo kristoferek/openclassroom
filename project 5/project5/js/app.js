@@ -1,5 +1,7 @@
 // Composing and displaying polite sentence
 
+// -------------------------------- Sentence parts --------------------------
+
 var salutations = [
   "Dear",
   "My beloved",
@@ -70,6 +72,8 @@ var recapitulations = [
   "Who else have you tried to convince that you are the right person for this moderatly interesting activity?"
 ];
 
+// -------------------------------- Sentence generating functions --------------------------
+
 // Max number of quotation combinations
 function maxCombinations(...arrays){
   var max = 1;
@@ -83,19 +87,34 @@ function maxCombinations(...arrays){
   return max;
 }
 
-// Compose complete sentence concatenated from passed arguments
-function cmoposeSentence(salutation, name, refusal, activity, reason, recapitulation){
-    return `${salutation} ${name}! ${refusal} ${activity} ${reason} ${recapitulation}`;
+// Get random array element
+function randomArrElement(arr){
+  var randomIndex = (arr.length > 1)
+    ? Math.floor(Math.random() * (arr.length))
+      : 0;
+  return arr[randomIndex];
 }
 
-// Display content in selector with specified id
-function displayHTML(content, id) {
-  var result = document.getElementById(id);
-  if (result) {
+// Function validating and returning input values
+function getInputValue(id){
 
-    result.innerText = content;
+  // Find input with given id
+  var inputField = document.querySelector(`input[id="${id}"]`);
+
+  // If  input field exist and is text type validate
+  if (inputField.type === "text"){
+    // If input field is empty or not "a word" show warning
+    if (inputField.value.search(/\w/) < 0) {
+      inputField.nextElementSibling.classList.remove('hidden');
+      return false;
+    } else {
+      inputField.nextElementSibling.classList.add('hidden');
+      return inputField.value;
+    }
+  } else if (inputField.type === "range") {
+    return inputField.value;
   } else {
-    console.log('Selector of id=', id, ' not found');
+    console.log('handleInputText(', id, ') failed querying selector');
   }
 }
 
@@ -134,33 +153,9 @@ function changeCase(string, caseType){
   }
 }
 
-// Get random array element
-function randomArrElement(arr){
-  var randomIndex = arr.length > 1 ? Math.floor(Math.random() * (arr.length)) : 0;
-  return arr[randomIndex];
-}
-
-// Function validating and returning input values
-function getInputValue(id){
-
-  // Find input with given id
-  var inputField = document.querySelector(`input[id="${id}"]`);
-
-  // If  input field exist and is text type validate
-  if (inputField.type === "text"){
-    // If input field is empty or not "a word" show warning
-    if (inputField.value.search(/\w/) < 0) {
-      inputField.nextElementSibling.classList.remove('hidden');
-      return false;
-    } else {
-      inputField.nextElementSibling.classList.add('hidden');
-      return inputField.value;
-    }
-  } else if (inputField.type === "range") {
-    return inputField.value;
-  } else {
-    console.log('handleInputText(', id, ') failed querying selector');
-  }
+// Compose complete sentence concatenated from passed arguments
+function cmoposeSentence(salutation, name, refusal, activity, reason, recapitulation){
+    return `${salutation} ${name}! ${refusal} ${activity} ${reason} ${recapitulation}`;
 }
 
 // Generate sentence depending on complexity
@@ -188,6 +183,18 @@ function generateRandomStatement(interlocutorName, activity, complexity){
       var randomSentence = cmoposeSentence(randomArrElement(salutations), name, "", action, randomArrElement(reasons), "");
   }
   return randomSentence;
+}
+
+// -------------------------------- HTML display functions --------------------------
+
+// Display content in selector with specified id
+function displayHTML(content, id) {
+  var result = document.getElementById(id);
+  if (result) {
+    result.innerText = content;
+  } else {
+    console.log('Selector of id=', id, ' not found');
+  }
 }
 
 // Handle button click and display sentence randomly generated from six parts:
@@ -239,8 +246,8 @@ function handleChangeComplexity(e, rangeId, targetId){
 // -------------------------------- Console functions --------------------------
 
 // Information for console user
-var messageErr = "Hmm... I don't understand. Try again!\n";
 var message = "\nType your choice:\n\n R - One random quotation\n C - One customised random quotation\n M - 1-5 random quotations\n N - 1-5 random customised quotations\n Q - to exit program";
+var messageErr = "Hmm... I don't understand. Try again!\n";
 
 // Prompts for user choice
 function promptWindow(type){
@@ -264,7 +271,7 @@ function promptNumber(){
     : 0;
 }
 
-// Prompts for number
+// Prompts for name and activity
 function promptNameAndActivity(){
   var name = prompt("What is name of your favorite interlocutor?");
   var activity = prompt("What is the activity that you hate doing?");
@@ -277,7 +284,7 @@ function promptNameAndActivity(){
 function randomSentences(names, activities, quantity){
   // Just in case - if specified quantity is out of range
   if (quantity == 0){
-    console.log(Error("Number out of range (1-5)"));
+    console.log("Number out of range (1-5)");
     return [];
   // Just in case - if user wishes more unique quotations than there is possible
   } else if (quantity > maxCombinations(salutations, names, refusals, activities, reasons, recapitulations)){
@@ -312,8 +319,8 @@ function logArray(array){
     array.forEach(function(el, i){
       console.log(`${i+1}. ${el}`);
     });
-  } else {
-    console.log(Error("Empty array of sentences"));
+  // } else {
+  //   console.log(Error("Empty array of sentences"));
   }
 }
 
