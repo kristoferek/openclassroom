@@ -1,0 +1,3 @@
+$ curl -X POST -u XXXXXXXX:XXXXXXXXX --header "Content-Type: application/json" --header
+"Accept: audio/mp3" --data "{\"text\":\"I am gona spent hours on figuring out what all these parameters and options are
+\"}" --output hello_world.mp3 "https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize"
